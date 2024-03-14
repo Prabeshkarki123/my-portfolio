@@ -1,0 +1,139 @@
+/* @keyframes waterDrop {
+    0%, 100% {
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+    25% {
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+    50% {
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+    75% {
+      clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    }
+  }
+  
+  .animate-water-drop {
+    animation: waterDrop 2s infinite ease-in-out;
+  } */
+
+@keyframes changeShape {
+  /* 0%, 100% {
+      clip-path: circle(50% 50% at 50% 50%);
+    }
+    20% {
+      clip-path: ellipse(40% 50% at 40% 50%);
+    }
+    40% {
+        clip-path: ellipse(30% 50% at 30% 50%);
+      }
+    60% {
+        clip-path: ellipse(40% 50% at 40% 50%);
+      }
+    80% {
+        clip-path: ellipse(100% 100% at 10% 10%);
+      } */
+}
+
+.image-container {
+  width: 200px;
+  /* Adjust the width as needed */
+  height: 200px;
+  /* Adjust the height as needed */
+  overflow: hidden;
+  position: relative;
+  animation: changeShape 2s infinite alternate;
+}
+
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-div-animate {
+  animation: rotateAnimation 3s linear infinite;
+}
+
+@keyframes rotateAnimate {
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(6deg);
+  }
+
+  50% {
+    transform: rotate(12deg);
+  }
+
+  75% {
+    transform: rotate(6deg);
+  }
+}
+
+.rotating-handAnimate {
+  transform-origin: bottom right;
+  /* Set the rotation origin to the bottom left corner */
+  animation: rotateAnimate 1s linear infinite;
+  /* 2s duration, forwards to keep the final state */
+}
+
+@keyframes scaleAnimation {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.025);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  75% {
+    transform: scale(1.025);
+  }
+}
+
+.about-pic-animate {
+  animation: scaleAnimation 1s linear infinite;
+}
+
+
+
+
+.firefly {
+  position: absolute;
+  /* width: 4px;
+  height: 4px; */
+  background-color: #ffff66; /*Yellow color for fireflies */
+   border-radius: 50%; 
+  animation: moveAround 3s infinite alternate;
+}
+
+@keyframes moveAround {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(20px, -20px);
+  }
+  50% {
+    transform: translate(-20px, 20px);
+  }
+  75% {
+    transform: translate(-20px, -20px);
+  }
+}
